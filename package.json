@@ -1,5 +1,5 @@
 {
-  "name": "get-package-version-action",
+  "name": "get-csproj-version-action",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/KageKirin/get-package-version-action.git"
+    "url": "git+ssh://git@github.com/KageKirin/get-csproj-version-action.git"
   },
   "keywords": [
     "semver"
@@ -16,9 +16,9 @@
   "author": "Chris Helmich",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KageKirin/get-package-version-action/issues"
+    "url": "https://github.com/KageKirin/get-csproj-version-action/issues"
   },
-  "homepage": "https://github.com/KageKirin/get-package-version-action#readme",
+  "homepage": "https://github.com/KageKirin/get-csproj-version-action#readme",
   "dependencies": {
     "@actions/core": "^1.6.0"
   }
