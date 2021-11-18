@@ -1,4 +1,0 @@
-# .gitignore for get-package-version-action
-node_modules/
-testproj/obj/
-testproj/bin/
