@@ -1,0 +1,28 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Test functionality
+        uses: ./ # Uses an action in the root directory
+        id: test
+
+      - name: Print results
+        run: echo ${{ steps.test.outputs.version }}
+
+      - name: Test functionality with params
+        uses: ./ # Uses an action in the root directory
+        id: testparams
+        with:
+          file: 'package.json'
+          regex: '^(?<major>[0-9]+)\.(?<minor>[0-9]+)\.(?<patch>[0-9]+)$'
+
+      - name: Print results
+        run: echo ${{ steps.testparams.outputs.version }}
