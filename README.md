@@ -1,4 +1,4 @@
-# get-node-package-version-action
+# get-node-package-version
 
 GitHub Action to retrieve the current version from a node package.json.
 Places the retrieved version into a context variable for later reference.
