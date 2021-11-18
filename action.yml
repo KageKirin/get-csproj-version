@@ -1,0 +1,26 @@
+name: 'Get Package Version'
+description: 'Retrieves the current version from a given package.json'
+branding:
+    icon: 'anchor'
+    color: 'blue'
+inputs:
+  file:
+    description: |
+      'The package.json from which to read the version. '
+      'Defaults to package.json.'
+      'Set if you need to read a different file / or different folder.'
+    required: false
+    default: 'package.json'
+  regex:
+      description: |
+        'ECMAScript Regular Expression to parse the version string for verification.'
+        'Defaults to being semver, i.e. "major.minor.patch"'
+        'Set if you to be compatible with a different, non-semver format.'
+      required: false
+      default: '^(?<major>[0-9]+)\.(?<minor>[0-9]+)\.(?<patch>[0-9]+)$'
+outputs:
+  version:
+    description: 'Retrieved and verified version string'
+runs:
+  using: 'node12'
+  main: 'index.js'
