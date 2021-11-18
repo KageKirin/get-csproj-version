@@ -23,4 +23,4 @@ outputs:
     description: 'Retrieved and verified version string'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'

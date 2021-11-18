@@ -1676,6 +1676,8 @@ module.exports = require("util");
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
+
+const fs = __nccwpck_require__(747);
 const core = __nccwpck_require__(619);
 
 const file = core.getInput('file');
