@@ -1,8 +1,8 @@
 name: 'Get CSProj Version'
 description: 'Retrieves the current version from a given .csproj'
 branding:
-    icon: 'anchor'
-    color: 'blue'
+  icon: anchor
+  color: blue
 inputs:
   file:
     description: |
