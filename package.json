@@ -1,5 +1,5 @@
 {
-  "name": "get-package-version-action",
+  "name": "get-node-package-version-action",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",

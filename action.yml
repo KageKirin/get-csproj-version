@@ -1,8 +1,8 @@
-name: 'Get Package Version'
-description: 'Retrieves the current version from a given package.json'
+name: Get Node Package Version
+description: Retrieves the current version from a given package.json
 branding:
-    icon: 'anchor'
-    color: 'blue'
+  icon: anchor
+  color: blue
 inputs:
   file:
     description: |
