@@ -40,7 +40,7 @@ function parse_version(version)
     let match = version.match(regex);
     if (match)
     {
-        return [match.groups.major, match.groups.minor, match.groups.patch];
+        return [match.groups.major, match.groups.minor, match.groups.patch, match.groups.prerelease, match.groups.buildmetadata];
     }
     return null
 }
