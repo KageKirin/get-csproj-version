@@ -1,16 +1,14 @@
-name: 'Get Package Version'
-description: 'Retrieves the current version from a given package.json'
+name: 'Get CSProj Version'
+description: 'Retrieves the current version from a given .csproj'
 branding:
     icon: 'anchor'
     color: 'blue'
 inputs:
   file:
     description: |
-      'The package.json from which to read the version. '
-      'Defaults to package.json.'
+      'The .csproj from which to read the version.'
       'Set if you need to read a different file / or different folder.'
-    required: false
-    default: 'package.json'
+    required: true
   regex:
     description: |
       'ECMAScript Regular Expression to parse the version string for verification.'
@@ -18,6 +16,11 @@ inputs:
       'Set if you to be compatible with a different, non-semver format.'
     required: false
     default: '^(?<major>[0-9]+)\.(?<minor>[0-9]+)\.(?<patch>[0-9]+)$'
+  xpath:
+    description: |
+      'XPath to version element.'
+    required: false
+    default: '//PropertyGroup/Version'
 outputs:
   version:
     description: 'Retrieved and verified version string'
