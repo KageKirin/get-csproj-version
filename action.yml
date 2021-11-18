@@ -12,12 +12,12 @@ inputs:
     required: false
     default: 'package.json'
   regex:
-      description: |
-        'ECMAScript Regular Expression to parse the version string for verification.'
-        'Defaults to being semver, i.e. "major.minor.patch"'
-        'Set if you to be compatible with a different, non-semver format.'
-      required: false
-      default: '^(?<major>[0-9]+)\.(?<minor>[0-9]+)\.(?<patch>[0-9]+)$'
+    description: |
+      'ECMAScript Regular Expression to parse the version string for verification.'
+      'Defaults to being semver, i.e. "major.minor.patch"'
+      'Set if you to be compatible with a different, non-semver format.'
+    required: false
+    default: '^(?<major>[0-9]+)\.(?<minor>[0-9]+)\.(?<patch>[0-9]+)$'
 outputs:
   version:
     description: 'Retrieved and verified version string'
