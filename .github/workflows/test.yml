@@ -13,6 +13,8 @@ jobs:
       - name: Test functionality
         uses: ./ # Uses an action in the root directory
         id: test
+        with:
+          file: 'testproj/testproj.csproj'
 
       - name: Print results
         run: echo ${{ steps.test.outputs.version }}
@@ -21,8 +23,9 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: testparams
         with:
-          file: 'package.json'
+          file: 'testproj/testproj.csproj'
           regex: '^(?<major>[0-9]+)\.(?<minor>[0-9]+)\.(?<patch>[0-9]+)$'
+          xpath: '//PropertyGroup/Version'
 
       - name: Print results
         run: echo ${{ steps.testparams.outputs.version }}
