@@ -6,9 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KageKirin/get-package-version-action.git"
+  },
+  "keywords": [
+    "semver"
+  ],
+  "author": "Chris Helmich",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KageKirin/get-package-version-action/issues"
+  },
+  "homepage": "https://github.com/KageKirin/get-package-version-action#readme",
   "dependencies": {
     "@actions/core": "^1.6.0"
   }
