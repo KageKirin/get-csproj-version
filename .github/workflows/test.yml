@@ -16,13 +16,56 @@ jobs:
 
       - name: Print results
         run: echo ${{ steps.test.outputs.version }}
+      - name: Get version with jq
+        uses: sergeysova/jq-action@v2
+        id: jqversion
+        with:
+          cmd: jq .version package.json -r
+      - name: Verify results
+        run: |
+          if [ "${{ steps.test.outputs.version }}" = "${{ steps.test.jqversion.version }}" ]; then
+            echo "Version matches"
+          else
+            echo "Version mismatch"
+            exit -1
+          fi
 
+
+      - name: Set version with jq
+        uses: sergeysova/jq-action@v2
+        with:
+          cmd: jq '.version = "1.2.3-alpha.5+foobar.42"' package.json > tmp && cat tmp > package.json
+      - name: Test functionality
+        uses: ./ # Uses an action in the root directory
+        id: test2
+      - name: Print results
+        run: echo ${{ steps.test2.outputs.version }}
+      - name: Verify results
+        run: |
+          if [ "${{ steps.test2.outputs.version }}" = "1.2.3-alpha.5+foobar.42" ]; then
+            echo "Version matches"
+          else
+            echo "Version mismatch"
+            exit -1
+          fi
+
+      - name: Set version with jq
+        uses: sergeysova/jq-action@v2
+        with:
+          cmd: jq '.version = "4.5.6"' package.json > tmp && cat tmp > package.json
       - name: Test functionality with params
         uses: ./ # Uses an action in the root directory
         id: testparams
         with:
           file: 'package.json'
           regex: '^(?<major>[0-9]+)\.(?<minor>[0-9]+)\.(?<patch>[0-9]+)$'
-
       - name: Print results
         run: echo ${{ steps.testparams.outputs.version }}
+      - name: Verify results
+        run: |
+          if [ "${{ steps.testparams.outputs.version }}" = "4.5.6" ]; then
+            echo "Version matches"
+          else
+            echo "Version mismatch"
+            exit -1
+          fi
