@@ -32,7 +32,7 @@ jobs:
 
       - name: Create tag
         run: |
-          git tag -m "CI: create new tag" v${{ steps.test.package_version.version }}
+          git tag -m "CI: create new tag" v${{ steps.package_version.outputs.version }}
           git push https://${{ github.token }}@github.com/OWNER/REPO
 ```
 
