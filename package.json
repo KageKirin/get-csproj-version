@@ -1,0 +1,27 @@
+{
+  "name": "get-csproj-version",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx @vercel/ncc build && npx convert-action"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KageKirin/get-csproj-version.git"
+  },
+  "keywords": [
+    "semver"
+  ],
+  "author": "Chris Helmich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KageKirin/get-csproj-version/issues"
+  },
+  "homepage": "https://github.com/KageKirin/get-csproj-version#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@xmldom/xmldom": "^0.7.5",
+    "xpath": "^0.0.32"
+  }
+}
