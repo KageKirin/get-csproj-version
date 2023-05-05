@@ -1,4 +1,4 @@
-name: 'Get CSProj Version'
+name: 'Get CSProj Version Fork'
 description: 'Retrieves the current version from a given .csproj'
 branding:
   icon: anchor
