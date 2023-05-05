@@ -1,5 +1,5 @@
 {
-  "name": "get-csproj-version",
+  "name": "get-csproj-version-fork",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -13,12 +13,12 @@
   "keywords": [
     "semver"
   ],
-  "author": "Chris Helmich",
+  "author": "Chris Helmich, MWin10",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/KageKirin/get-csproj-version/issues"
   },
-  "homepage": "https://github.com/KageKirin/get-csproj-version#readme",
+  "homepage": "https://github.com/MWin10/get-csproj-version-fork#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@xmldom/xmldom": "^0.7.5",
