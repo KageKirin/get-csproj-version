@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/MWin10/get-csproj-version-fork#readme",
   "dependencies": {
-    "@actions/core": "^1.6.0",
+    "@actions/core": "^1.10.0",
     "@xmldom/xmldom": "^0.7.5",
     "xpath": "^0.0.32"
   }
