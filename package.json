@@ -1,6 +1,6 @@
 {
   "name": "get-csproj-version-fork",
-  "version": "0.0.1",
+  "version": "1.3.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/KageKirin/get-csproj-version.git"
+    "url": "git+ssh://git@github.com/MWin10/get-csproj-version-fork.git"
   },
   "keywords": [
     "semver"
