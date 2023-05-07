@@ -25,5 +25,5 @@ outputs:
   version:
     description: 'Retrieved and verified version string'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
