@@ -22,18 +22,20 @@ jobs:
     if: github.event.pull_request.merged == true
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get version
         id: package_version
-        uses: KageKirin/get-csproj-version@v0
+        uses: KageKirin/get-csproj-version@latest
         with:
           file: src/a_project.csproj
 
       - name: Create tag
         run: |
-          git tag -m "CI: create new tag" v${{ steps.test.package_version.version }}
-          git push https://${{ github.token }}@github.com/OWNER/REPO
+          git tag -m "CI: create new tag" v${{ steps.package_version.outputs.version }}
+          git push --follow-tags
 ```
 
 ## Inputs
