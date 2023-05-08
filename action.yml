@@ -1,5 +1,5 @@
-name: 'Get CSProj Version Fork'
-description: 'Retrieves the current version from a given .csproj'
+name: Get CSProj Version Fork
+description: Retrieves the current version from a given .csproj
 branding:
   icon: anchor
   color: blue
@@ -10,20 +10,24 @@ inputs:
       'Set if you need to read a different file / or different folder.'
     required: true
   regex:
-    description: |
-      'ECMAScript Regular Expression to parse the version string for verification.'
+    description: >
+      'ECMAScript Regular Expression to parse the version string for
+      verification.'
+
       'Defaults to being semver, i.e. "major.minor.patch"'
+
       'Set if you to be compatible with a different, non-semver format.'
     required: false
-    default: '^(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)(\.(?<patch>0|[1-9]\d*))?(?:-(?<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$'
+    default: >-
+      ^(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)(\.(?<patch>0|[1-9]\d*))?(?:-(?<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
   xpath:
     description: |
       'XPath to version element.'
     required: false
-    default: '//PropertyGroup/Version'
+    default: //PropertyGroup/Version
 outputs:
   version:
-    description: 'Retrieved and verified version string'
+    description: Retrieved and verified version string
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: node16
+  main: dist/index.js
