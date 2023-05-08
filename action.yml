@@ -2,7 +2,7 @@ name: Get CSProj Version Fork
 description: Retrieves the current version from a given .csproj
 branding:
   icon: anchor
-  color: blue
+  color: yellow
 inputs:
   file:
     description: |
