@@ -1,6 +1,6 @@
 {
   "name": "get-csproj-version-fork",
-  "version": "1.5.0",
+  "version": "1.5.5",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
