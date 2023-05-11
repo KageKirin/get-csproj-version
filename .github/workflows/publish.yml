@@ -5,8 +5,10 @@ name: Publish
 
 # Manual or automatic release
 on:
-  release:
-    types: [published, edited]
+  workflow_dispatch:
+  # auto publish isn't currently working.
+  #release:
+  #  types: [published, edited]
 
 jobs:
   publish:
@@ -20,6 +22,8 @@ jobs:
           
       - name: Setup Node
         uses: actions/setup-node@v2.5.2
+        with:
+          node-version: '16'
 
       # Compile dist/index.js and bundle with action.yml
       # Force push major and minor tags, e.g. v1, v1.0
