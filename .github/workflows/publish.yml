@@ -28,4 +28,4 @@ jobs:
       # See documentation: https://github.com/JasonEtco/build-and-tag-action
       - uses: JasonEtco/build-and-tag-action@v2.0.1
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
