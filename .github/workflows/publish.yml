@@ -5,10 +5,8 @@ name: Publish
 
 # Manual or automatic release
 on:
-  workflow_dispatch:
-  # auto publish isn't currently working.
-  #release:
-  #  types: [published, edited]
+  release:
+    types: [published, edited]
 
 jobs:
   publish:
