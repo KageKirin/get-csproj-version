@@ -19,9 +19,9 @@ jobs:
           ref: ${{ github.event.release.tag_name }}
           
       - name: Setup Node
-        uses: actions/setup-node@v2.5.2
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 16
 
       # Compile dist/index.js and bundle with action.yml
       # Force push major and minor tags, e.g. v1, v1.0
