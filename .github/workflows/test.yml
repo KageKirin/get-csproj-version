@@ -8,7 +8,7 @@ jobs:
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
-        uses: actions/checkout@vlatest
+        uses: actions/checkout@latest
 
       # basic simple test: just print current this package's version
       - name: Test functionality
