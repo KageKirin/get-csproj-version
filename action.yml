@@ -1,8 +1,8 @@
-name: Get CSProj Version
+name: Get CSProj Version Fork
 description: Retrieves the current version from a given .csproj
 branding:
   icon: anchor
-  color: blue
+  color: yellow
 inputs:
   file:
     description: |
@@ -29,5 +29,5 @@ outputs:
   version:
     description: Retrieved and verified version string
 runs:
-  using: node16
+  using: node20
   main: dist/index.js

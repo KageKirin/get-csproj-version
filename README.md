@@ -1,4 +1,4 @@
-# get-csproj-version
+# get-csproj-version-fork
 
 GitHub Action to retrieve the current version from a dotnet .csproj project file.
 Places the retrieved version into a context variable for later reference.
@@ -28,7 +28,7 @@ jobs:
 
       - name: Get version
         id: package_version
-        uses: KageKirin/get-csproj-version@latest
+        uses: MWin10/get-csproj-version-fork@latest
         with:
           file: src/a_project.csproj
 
